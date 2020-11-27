@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js Form</title>
+	<style>
+		.submit:hover{
+	background-color: #BAFAF0;
+  color: black;
+  border: 2px solid #e7e7e7;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div id="show">
+	
+	</div> -->
+	<table align="center" style="background-color: #56F6DA;color: #0D0C0C; padding: 10px;font-size: 20px;">
+		<form action="" name="personal_info" method="POST">
+			<tr>
+				<td><label for="id">ID:</label></td>
+				<td><input type="text" name="id" id="id" placeholder="Enter your id" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td><input type="text" name="name" id="name" placeholder="Enter your Name" required></td>
+			</tr>
+
+			<tr>
+				<td><label for="item">Choice Item:</label></td>
+				<td>
+					<select name="item" id="item">
+						<option  value="Food">Food</option>
+						<option  value="Soap">Soap</option>
+						<option  value="Shampo">Shampo</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="Imported"> Imported:</label></td>
+				<td>
+					<input type="checkbox" class="check" name="Imported" value="HTML" id="Imported">HTML
+					<input type="checkbox" class="check" name="Imported" value="CSS" id="Imported">CSS
+
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="price">Price:</label></td>
+				<td><input type="text" name="price" id="price" placeholder="Enter Product price " required=""></td>
+			</tr>
+			<tr>
+				<td><label for="radio">Gender:</label></td>
+				<td>
+					<input type="radio" name="radio" id="radio" value="male"> Male
+				    <input type="radio" name="radio" id="radio" value="Female"> Female
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="textarea"> Menufecture:</label></td>
+				<td><textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="About Menufecture" required></textarea></td>
+			</tr>
+			<tr>
+				<td>
+				<button type="button" onclick="welcome()">submit</button>
+				</td>
+			</tr>
+		</form>
+	</table>
+</body>
+<script>
+		function welcome(){
+			var id= document.personal_info.id.value;
+			var fn= document.personal_info.name.value;
+			var item= document.personal_info.item.value;
+			var price= document.personal_info.price.value;
+			var textarea= document.personal_info.textarea.value;
+			var gender= document.personal_info.radio.value;
+
+			var checkedvalue = [];
+			var inputelements = document.getElementsByClassName('check');
+			for (var i = 0; i<inputelements.length; i++) {
+				if (inputelements[i].checked) {
+					checkedvalue.push(inputelements[i].value);
+				}
+			}
+
+			var full= "Welcome to "+ fn + "<br> " +id+"<br>" + item + "<br>"+ checkedvalue + "<br>" + price + "<br>" + textarea+ "<br>" + gender;
+			//document.getElementById('show').innerHTML=full;
+			document.write(full)
+		}
+	</script>
+</html>
