@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a={ //a {} mode neya hole a object
+			fname:'Arif', //fname= profite, Arif=value
+			age:18,
+			email:'ramin2386@gmail.com',
+			fvmovie:["Dhoom","hum","akash"], //profite + Array
+			salary: function(){
+				return 2500;
+			}, 
+			full: function(){
+				//return a.fname + " "+ a.age;
+				return this.fname + " "+ this.age;
+			},
+			obj2: { //Object ar mode Object
+				'city':'Dhaka',
+				'county':'Bangladesh',
+			}
+
+
+		}
+		console.log(a);
+		document.write(a.obj2.city);
+	</script>
+</body>
+</html>
