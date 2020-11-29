@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For Loop</title>
+	<style>
+		.box{
+			border: 1px solid #CA1D1D;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		for(var a=1; a<=10;a++){
+			//document.write("hello word<br>");
+			//document.write("<br>");
+			//document.write(a +"<br>");
+			document.write("2*" + a + "=" + a*2 +"<br>");
+
+		}
+	</script>
+	<script>
+		var fruits= new Array("Apple","Orange","Grape","Mango");
+
+		for (var i = 0; i < fruits.length; i++) {
+
+			document.write("<table class='box'><tr>");
+			document.write("<td>"+ fruits[i]+ "</td>");
+			document.write("</tr></table>");
+		}
+	</script>
+</body>
+</html>
